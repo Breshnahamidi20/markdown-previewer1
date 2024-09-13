@@ -44,6 +44,7 @@ function App() {
         onChange={handleTextChange}
         className="w-full md:w-1/2 p-3 rounded-md shadow-md border border-gray-300 resize-none h-64"
       />
+      {/* eslint-disable-next-line react/no-danger */}
       <div
         id="preview"
         className="w-full md:w-1/2 mt-6 p-3 rounded-md shadow-md bg-white border border-gray-300"
