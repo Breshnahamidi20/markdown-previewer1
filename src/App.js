@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
-
-
 import { marked } from 'marked';
-
-
 import 'tailwindcss/tailwind.css';
 
 const defaultMarkdown = `# Welcome to my Markdown Previewer!
@@ -31,10 +27,10 @@ function helloWorld() {
 *Bold text*
 `;
 
-  function App( ) {
-    const [text, setText] =   useState(defaultMarkdown);
+function App( ) {
+  const [text, setText] =  useState(defaultMarkdown);
 
-     const handleTextChange =   (event) => {
+  const handleTextChange = (event) => {
     setText(event.target.value);
   };
 
@@ -59,4 +55,4 @@ function helloWorld() {
   );
 }
 
-    export default App;
+export default App;
