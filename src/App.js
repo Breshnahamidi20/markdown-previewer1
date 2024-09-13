@@ -7,14 +7,14 @@ const defaultMarkdown = `# Welcome to my Markdown Previewer!
 ### And here's some other cool stuff:
 [Link to Google](https://www.google.com)
 
-Inline code: \<div></div>\
+Inline code: <div></div>
 
-\\\`
+\`\`\`
 // This is a code block:
 function helloWorld() {
   console.log("Hello, world!");
 }
-\\\`
+\`\`\`
 
 - List item 1
 - List item 2
@@ -24,19 +24,17 @@ function helloWorld() {
 
 ![Markdown Logo](https://markdown-here.com/img/icon256.png)
 
-*Bold text*
+**Bold text**
 `;
 
-function App( ) {
-  const [text, setText] =  useState(defaultMarkdown);
+function App() {
+  const [text, setText] = useState(defaultMarkdown);
 
   const handleTextChange = (event) => {
     setText(event.target.value);
   };
 
-  const createMarkup = () => {
-    return { __html: marked(text, { breaks: true, gfm: true }) }; // Enable GitHub flavored markdown and line breaks
-  };
+  const createMarkup = () => ({ __html: marked(text, { breaks: true, gfm: true }) });
 
   return (
     <div className="min-h-screen flex flex-col items-center p-6 bg-gray-100">
