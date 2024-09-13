@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { marked } from 'marked';
-import 'tailwindcss/tailwind.css';
+import 'tailwindcss/tailwind.css'; // Ensure tailwindcss is listed in your dependencies
 
 const defaultMarkdown = `# Welcome to my Markdown Previewer!
 ## This is a sub-heading...
 ### And here's some other cool stuff:
 [Link to Google](https://www.google.com)
 
-Inline code: <div></div>
+Inline code: \`<div></div>\`
 
 \`\`\`
 // This is a code block:
